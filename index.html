@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharaja Multiplex</title>
+  <link rel="stylesheet" href="style.css">
+     <!--icon-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!--logo with title-->
+        <link rel="shortcut icon" href="logo.png" type="x-ixon">
+      <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="logo"><img src="logo.png" alt="logo" style="height: 80px;width: 80px;"></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="movies.html">Foods & Beverages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="adminlogin.html">Admin</a></li>
+    </ul>
+    <i class="fa-solid fa-user" style="color: white; cursor: pointer;" onclick="navigateToLoginPage()"></i>
+</header>
+
+<!-- slider -->
+
+<div class="slider">
+    <!-- list Items -->
+    <div class="list">
+        <div class="item active">
+            <img src="interstellar.jpg">
+            <div class="content">
+                <p>Sci-fi</p>
+                <h2>Interstellar</h2>
+                <p class="director">
+                    Written and Directed by Christopher Nolan
+                </p>
+                <button  class="info">More Info</button>
+                <button  class="get-ticket">Get Ticket</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="twilight.jpeg">
+            <div class="content">
+                <p>Fantasy</p>
+                <h2>Twilight</h2>
+                <p class="director">
+                  Written and Directed by Bill Condon 
+              </p>
+              <button  class="info">More Info</button>
+              <button  class="get-ticket" href="showselection.html">Get Ticket</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="ff.jpg">
+            <div class="content">
+                <p>Action</p>
+                <h2>Furious 7</h2>
+                <p class="director">
+                  Written and Directed by Chris Morgan and James Wan 
+              </p>
+              <button  class="info">More Info</button>
+              <button  class="get-ticket">Get Ticket</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="remember.jpg">
+            <div class="content">
+                <p>Horror</p>
+                <h2>Re/member</h2>
+                <p class="director">
+                  Written and Directed by Dokiharumi and Hasumi Eiichiro 
+              </p>
+              <button  class="info">More Info</button>
+              <button  class="get-ticket">Get Ticket</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="ratatouille.jpg">
+            <div class="content">
+                <p>Animation</p>
+                <h2>Ratatouille</h2>
+                <p class="director">
+                  Written and Directed by Brad Bird
+              </p>
+              <button  class="info">More Info</button>
+              <button  class="get-ticket">Get Ticket</button>
+            </div>
+        </div>
+    </div>
+    <!-- button arrows -->
+    <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+    thumbnail
+    <div class="thumbnail">
+        <div class="item active">
+            <img src="interstellar.jpg">
+            <div class="content">
+                Interstellar
+            </div>
+        </div>
+        <div class="item">
+            <img src="twilight.jpeg">
+            <div class="content">
+                 Twilight
+            </div>
+        </div>
+        <div class="item">
+            <img src="ff.jpg">
+            <div class="content">
+                Furious 7
+            </div>
+        </div>
+        <div class="item">
+            <img src="remember.jpg">
+            <div class="content">
+                Re/member
+            </div>
+        </div>
+        <div class="item">
+            <img src="ratatouille.jpg">
+            <div class="content">
+                Ratatouille
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="reel-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+
+    <div class="ongoingmovies-titlecard">
+      <h2 class="ongoingmovies-title">
+        Ongoing Movies
+      </h2>
+      <p class="underline"></p>
+    </div>
+
+
+<div class="cards">
+    <!-- one -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="texas.jpg" alt="texas">
+            <p class="content-1">
+                Texas Chainsaw 3D
+            </p>
+            <p class="content-2">
+                Thriller / 83 mins
+            </p>
+               <a href="https://www.youtube.com/embed/75TvtJIbbNY?si=7JNV8itpGxxGymgH"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+    <!-- two -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="avatar.jpg" alt="avatar">
+            <p class="content-1">
+                Avatar 
+            </p>
+            <p class="content-2">
+                Fantasy / 161 mins
+            </p>
+            <a href="https://www.youtube.com/embed/5PSNL1qE6VY?si=EEDzsG3Ls6y0wyo7"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="cards">
+    <!-- one -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="baahubali.jpg" alt="baahubali">
+            <p class="content-1">
+                Baahubali
+            </p>
+            <p class="content-2">
+                Fantasy Action / 159 mins
+            </p>
+            <a href="https://www.youtube.com/embed/VdafjyFK3ko?si=lcDMbTXWAsoajVXk"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+    <!-- two -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="homealone.jpg" alt="homealone">
+            <p class="content-1">
+                Home Alone 
+            </p>
+            <p class="content-2">
+                Comedy / 103 mins
+            </p>
+            <a href="https://www.youtube.com/embed/Fmih-zWIjGY?si=gZJhymBZ7jzQpY_Q"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="cards">
+    <!-- one -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="sitaramam.jpg" alt="sitaramam">
+            <p class="content-1">
+                Sita Ramam
+            </p>
+            <p class="content-2">
+                Romance / 163 mins
+            </p>
+            <a href="https://www.youtube.com/embed/QS2UPxj_Y9w?si=nW4CSZyXO9fclD2H"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+    <!-- two -->
+    <div class="card">
+        <div class="container-card bg-orange-box"><img src="the8thnight.jpg" alt="homealone">
+            <p class="content-1">
+                The 8th Night
+            </p>
+            <p class="content-2">
+                Horror / 115 mins
+            </p>
+            <a href="https://www.youtube.com/embed/DbYu4-XYNss?si=KrHeLo4rHE8nqgjL"><img class="play-btn" src="play-button.png" title="Watch Trailer"></a>
+            <button class="content-3">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<!--info 1-->
+<div class="info-container">
+    <img class="info-img" src="info-1.jpg">
+   <img class="info-logo" src="logo.png" alt="logo">
+   <pre class="info-content" style="font-size: 35px;font-weight: 500;font-family: Caveat, cursive;">
+        Movies that make you laugh, cry, and cheer 
+   Experience the magic of <span style="color: #a8540b;font-family: Caveat, cursive;font-size: 80px;font-weight: 500;">Maharaja</span>
+   </pre>
+   <button class="info-learnmore">To Learn More...</button>
+</div>
+
+<!--upcoming-->
+<div class="upcoming-container">
+    <h2 class="upcomingmovies-title">
+      Upcoming Movies
+    </h2>
+    <div class="upcoming-cards">
+        <div class="card">
+            <img src="kalki.jpg" alt="kalki">
+            <div class="card-body">
+                <p class="card-title">
+                    Kalki
+                </p>
+                <button class="card-btn1">
+                   Watch Trailer
+                </button>
+                <button class="card-btn2">
+                    Get Ticket
+                 </button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="spidey.webp" alt="spidey">
+            <div class="card-body">
+                <p class="card-title">
+                    Spiderman
+                </p>
+                <button class="card-btn1">
+                   Watch Trailer
+                </button>
+                <button class="card-btn2">
+                    Get Ticket
+                 </button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="the8thnight.jpg" alt="the8thnight">
+            <div class="card-body">
+                <p class="card-title">
+                    The 8th Night
+                </p>
+                <button class="card-btn1">
+                   Watch Trailer
+                </button>
+                <button class="card-btn2">
+                    Get Ticket
+                 </button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="remember.jpg" alt="remember">
+            <div class="card-body">
+                <p class="card-title">
+                    Re/member
+                </p>
+                <button class="card-btn1">
+                   Watch Trailer
+                </button>
+                <button class="card-btn2">
+                    Get Ticket
+                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <div class="gallery-container">
+    <div class="gallery-left">
+      <img src="gallery-l.jpg" alt="gallery">
+      <div class="gallery-left-content">
+        <p class="gallery-left-content1">
+                <span style="font-size: 130px;color: #a8540b;">P</span>hoto
+        </p>
+        <p class="gallery-left-content2">
+            <span style="font-size: 130px;color: #a8540b;">G</span>allery
+        </p>
+      
+        <p class="gallery-left-content3">
+            A gallery of dreams, brought to life of stage.
+        </p>
+       
+      </div>
+    </div>
+    <div class="gallery-right">
+      <img class="gallery-slides" src="gallery-r1.jpg" alt="gallery-r1">
+      <img class="gallery-slides" src="gallery-r2.jpg" alt="gallery-r2">
+      <img class="gallery-slides" src="gallery-r3.jpg" alt="gallery-r3">
+      <img class="gallery-slides" src="gallery-r4.jpg" alt="gallery-r4">
+    </div>
+    <img class="gallery-btn" onclick="plusDivs(+1)" src="play-button.png">
+  </div>
+ 
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>our link</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">terms &amp; conditon</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Address</h4>
+                <ul>
+                    <li>Maharaja cinemas</li>
+                    <li>Chennimalai Road,</li>
+                    <li>Erode - 638004</li>
+                    <li>Enquiry: +91 84380 71735
+                     <br>Phone: +91 424 - 2275128</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  
+<script src="script.js"></script>
+<script>
+
+document.querySelectorAll('.get-ticket').forEach(button => {
+    button.addEventListener('click', function() {
+        const movieName = this.parentElement.querySelector('h2').textContent;
+        localStorage.setItem('selectedMovie', movieName);
+        window.location.href = 'showselection.html';
+    });
+});
+document.querySelectorAll('.content-3').forEach(button => {
+    button.addEventListener('click', function() {
+        const movieName = this.parentElement.querySelector('p').textContent;
+        localStorage.setItem('selectedMovie', movieName);
+        window.location.href = 'showselection.html';
+    });
+});
+document.querySelectorAll('.card-btn2').forEach(button => {
+    button.addEventListener('click', function() {
+        const movieName = this.parentElement.querySelector('p').textContent;
+        localStorage.setItem('selectedMovie', movieName);
+        window.location.href = 'showselection.html';
+    });
+});
+
+function navigateToLoginPage() {
+    window.location.href = 'login.html'; 
+}
+
+
+</script>
+
+
+</body>
+</html>

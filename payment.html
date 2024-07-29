@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Payment Process</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    
+        <header>
+            <div class="logo"><img src="logo.png" alt="logo" style="height: 80px;width: 80px;"></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="movies.html">Foods & Beverages</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="adminlogin.html">Admin</a></li>
+            </ul>
+            <i class="fa-solid fa-user" style="color: white;"></i>
+        </header>
+
+    <center><h1>Payment Process</h1></center>
+
+    
+
+    <main>
+        <div id="bill-details">
+            <h2>Bill Details</h2>
+            <div class="bill-info">
+                <p><strong>Movie:</strong> <span id="movieName">Movie Name</span></p>
+                <p><strong>Screen:</strong> <span id="screenNumber">Screen Number</span></p>
+                <p><strong>Date:</strong> <span id="showDate">Date</span></p>
+                <p><strong>Time:</strong> <span id="showTime">Time</span></p>
+                <p><strong>Seats:</strong> <span id="selected-seats">Seats</span></p>
+                <p><strong>Amount:</strong> Rs. <span id="ticket-amount">Amount</span></p>
+            </div>
+            <button type="button" onclick="showPaymentForm()">Continue to Payment</button>
+        </div>
+
+        <div id="payment-section" style="display: none;">
+            <h2>Payment Details</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="card">Card Number:</label>
+                    <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Expiry Date:</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Cardholder's Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <button type="submit" >Submit Payment</button>
+                <button type="button" onclick="cancelPayment()">Cancel</button>
+            </form>
+        </div>
+
+        <div id="view-tickets-section" style="display: none;">
+            <button type="button" onclick="viewTickets()">click here to View Tickets</button>
+        </div>
+    </main>
+     
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>our link</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">terms &amp; conditon</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Address</h4>
+                <ul>
+                    <li>Maharaja cinemas</li>
+                    <li>Chennimalai Road,</li>
+                    <li>Erode - 638004</li>
+                    <li>Enquiry: +91 84380 71735
+                     <br>Phone: +91 424 - 2275128</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>

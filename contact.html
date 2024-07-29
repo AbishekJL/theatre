@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+       <!--icon-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- header -->
+  <header>
+    <div class="logo"><img src="logo.png" alt="logo" style="height: 80px;width: 80px;"></div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="movies.html">Foods & Beverages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="adminlogin.html">Admin</a></li>
+    </ul>
+    <i class="fa-solid fa-user" style="color: white;"></i>
+</header>
+<!--content-->
+    <section class="contact">
+        <div class="contact-wrapper">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Spend your valuable time here for enhancing the user experience </p>
+            
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"> <img src="map-marker.png" width="35"></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p style="width:50%;">335V+WVJ, Transport Nagar Inside Maharaja Theme Park, Neelambur , Avinashi Rd, Coimbatore,TamilNadu 641 014.</p>
+                        </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="telephone.png" width="30"></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>805-582-9893</p>
+                        </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><img src="email.png" width="30">
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>maharajamupltiplex@gmail.com</p>
+                                   
+                  </div>                
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <h2>Post your feeback here</h2>
+                    <input type="hidden" name="access_key" value="61037df1-c15e-473c-9db0-6c7b7888bb78">
+                    <div class="inputBox">
+                        <input type="text" name="Name" id="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="Email" id="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="Message" required="required" id=""></textarea>
+                        <span>Type your Message ...</span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit" name="" value="Send">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+    </section>
+</body>
+</html>

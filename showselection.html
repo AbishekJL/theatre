@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Time Selection</title>
+  <link rel="stylesheet" href="showselection.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logo.png" alt="logo" style="height: 80px;width: 80px;"></div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="movies.html">Foods & Beverages</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="adminlogin.html">Admin</a></li>
+        </ul>
+        <i class="fa-solid fa-user" style="color: white;"></i>
+
+  </header>
+  <br><br><br><br><br><br>
+  <center><h1>Show Time Selection</h1></center>
+  <main>
+    <fieldset>
+      <div id="screen-select-div">
+<br>
+        <div class="carousel carousel-nav" data-flickity='{"contain": true, "pageDots": false }'>
+          <div class="carousel-cell" id="date-1" onclick="selectDate('date-1', '13', 'Today')">
+            <div class="date-numeric">13</div>
+            <div class="date-day">Today</div>
+          </div>
+          <div class="carousel-cell" id="date-2" onclick="selectDate('date-2', '14', 'Tomorrow')">
+            <div class="date-numeric">14</div>
+            <div class="date-day">Tomorrow</div>
+          </div>
+          <div class="carousel-cell" id="date-3" onclick="selectDate('date-3', '15', 'Monday')">
+            <div class="date-numeric">15</div>
+            <div class="date-day">Monday</div>
+          </div>
+          <div class="carousel-cell" id="date-4" onclick="selectDate('date-4', '16', 'Tuesday')">
+            <div class="date-numeric">16</div>
+            <div class="date-day">Tuesday</div>
+          </div>
+          <div class="carousel-cell" id="date-5" onclick="selectDate('date-5', '17', 'Wednesday')">
+            <div class="date-numeric">17</div>
+            <div class="date-day">Wednesday</div>
+          </div>
+          <div class="carousel-cell" id="date-6" onclick="selectDate('date-6', '18', 'Thursday')">
+            <div class="date-numeric">18</div>
+            <div class="date-day">Thursday</div>
+          </div>
+          <div class="carousel-cell" id="date-7" onclick="selectDate('date-7', '19', 'Friday')">
+            <div class="date-numeric">19</div>
+            <div class="date-day">Friday</div>
+          </div>
+        </div>
+        <ul class="time-ul">
+          <li class="time-li">
+            <div class="screens">
+              Screen 1
+            </div>
+            <div class="time-btn">
+              <button id="time-1" class="screen-time" onclick="selectTime('time-1', '1:05 PM')">1:05 PM</button>
+              <button id="time-2" class="screen-time" onclick="selectTime('time-2', '4:00 PM')">4:00 PM</button>
+              <button id="time-3" class="screen-time" onclick="selectTime('time-3', '9:00 PM')">9:00 PM</button>
+            </div>
+          </li>
+          <li class="time-li">
+            <div class="screens">
+              Screen 2
+            </div>
+            <div class="time-btn">
+              <button id="time-4" class="screen-time" onclick="selectTime('time-4', '3:00 PM')">3:00 PM</button>
+            </div>
+          </li>
+          <li class="time-li">
+            <div class="screens">
+              Screen 3
+            </div>
+            <div class="time-btn">
+              <button id="time-5" class="screen-time" onclick="selectTime('time-5', '9:05 AM')">9:05 AM</button>
+              <button id="time-6" class="screen-time" onclick="selectTime('time-6', '10:00 PM')">10:00 PM</button>
+            </div>
+          </li>
+          <li class="time-li">
+            <div class="screens">
+              Screen 4
+            </div>
+            <div class="time-btn">
+              <button id="time-7" class="screen-time" onclick="selectTime('time-7', '9:05 AM')">9:05 AM</button>
+              <button id="time-8" class="screen-time" onclick="selectTime('time-8', '11:00 AM')">11:00 AM</button>
+              <button id="time-9" class="screen-time" onclick="selectTime('time-9', '3:00 PM')">3:00 PM</button>
+              <button id="time-10" class="screen-time" onclick="selectTime('time-10', '7:00 PM')">7:00 PM</button>
+              <button id="time-11" class="screen-time" onclick="selectTime('time-11', '10:00 PM')">10:00 PM</button>
+              <button id="time-12" class="screen-time" onclick="selectTime('time-12', '11:00 PM')">11:00 PM</button>
+            </div>
+          </li>
+          <li class="time-li">
+            <div class="screens">
+              Screen 5
+            </div>
+            <div class="time-btn">
+              <button id="time-13" class="screen-time" onclick="selectTime('time-13', '9:05 AM')">9:05 AM</button>
+              <button id="time-14" class="screen-time" onclick="selectTime('time-14', '12:00 PM')">12:00 PM</button>
+              <button id="time-15" class="screen-time" onclick="selectTime('time-15', '1:00 PM')">1:00 PM</button>
+              <button id="time-16" class="screen-time" onclick="selectTime('time-16', '3:00 PM')">3:00 PM</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <input id="screen-next-btn" type="button" name="next-step" class="next-step" value="Continue Booking" onclick="continueBooking()" disabled />
+    </fieldset>
+   
+  </main>
+
+  <br><br><br>
+   
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>our link</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">terms &amp; conditon</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Address</h4>
+                <ul>
+                    <li>Maharaja cinemas</li>
+                    <li>Chennimalai Road,</li>
+                    <li>Erode - 638004</li>
+                    <li>Enquiry: +91 84380 71735
+                     <br>Phone: +91 424 - 2275128</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src="showselection.js"></script>
+</body>
+</html>

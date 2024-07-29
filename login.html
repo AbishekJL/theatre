@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt="logo" style="height: 80px;width: 80px;"></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="movies.html">Foods & Beverages</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="adminlogin.html">Admin</a></li>
+            </ul>
+            <i class="fa-solid fa-user" style="color: white;"></i>
+    
+      </header>
+
+
+    <div class="modal" id="modal">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-toggle">
+                    <button id="login-toggle" onclick="toggleLogin()">Login</button>
+                    <button id="signup-toggle" onclick="toggleSignup()">Signup</button>
+                </div>
+                <form id="login-form" class="form" onsubmit="return login(event)">
+                    <h2>Login</h2>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required><br>
+                    <button type="submit" id="login">Login</button>
+                </form>
+                <form id="signup-form" class="form">
+                    <h2>Signup</h2>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required><br>
+                    <button type="submit" id="signup">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+     
+ 
+
+    <script src="login.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCyh_vJQT-vRaCX0RtcO7qBjggS6JfUuLE",
+            authDomain: "weblogin-f306a.firebaseapp.com",
+            databaseURL: "https://weblogin-f306a-default-rtdb.firebaseio.com",
+            projectId: "weblogin-f306a",
+            storageBucket: "weblogin-f306a.appspot.com",
+            messagingSenderId: "366090963409",
+            appId: "1:366090963409:web:3e2b1db39a4cb36f63f8f0"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById('signup').addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent form submission
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var username = document.getElementById("username").value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    alert('User created: ' + username);
+                    window.location.href = 'home.html'; 
+                    // Save the username to the database
+                    set(ref(database, 'users/' + user.uid), {
+                        username: username,
+                        email: email
+                    });
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert('Error: ' + errorMessage);
+                });
+        });
+
+        document.getElementById('login').addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent form submission
+            var email = document.getElementById('login-email').value;
+            var password = document.getElementById('login-password').value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // ...
+                    const dt = new Date();
+                    update(ref(database, 'users/' + user.uid), {
+                        last_login: dt,
+                    });
+                   // alert('User logged in');
+                    window.location.href = 'index.html'; 
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert('Invalid email or password Try again :'+ errorMessage);
+                    window.location.href = 'login.html';
+                });
+        });
+
+        document.getElementById('profile-icon').addEventListener('click', () => {
+            document.getElementById('modal').style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

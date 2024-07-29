@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+</head>
+<body>
+    <h1>Admin Portal</h1>
+    <h2>Shows</h2>
+    <table id="showsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie Name</th>
+                <th>Screen Number</th>
+                <th>Show Date</th>
+                <th>Show Time</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Bookings</h2>
+    <table id="bookingsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Show ID</th>
+                <th>Seat Numbers</th>
+                <th>Ticket Amount</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        fetch('http://localhost:3000/get-shows')
+            .then(response => response.json())
+            .then(data => {
+                const showsTable = document.getElementById('showsTable').getElementsByTagName('tbody')[0];
+                data.forEach(show => {
+                    const row = showsTable.insertRow();
+                    row.insertCell(0).textContent = show.id;
+                    row.insertCell(1).textContent = show.movie_name;
+                    row.insertCell(2).textContent = show.screen_number;
+                    row.insertCell(3).textContent = show.show_date;
+                    row.insertCell(4).textContent = show.show_time;
+                });
+            });
+
+        fetch('http://localhost:3000/get-bookings')
+            .then(response => response.json())
+            .then(data => {
+                const bookingsTable = document.getElementById('bookingsTable').getElementsByTagName('tbody')[0];
+                data.forEach(booking => {
+                    const row = bookingsTable.insertRow();
+                    row.insertCell(0).textContent = booking.id;
+                    row.insertCell(1).textContent = booking.show_id;
+                    row.insertCell(2).textContent = JSON.parse(booking.seat_numbers).join(', ');
+                    row.insertCell(3).textContent = booking.ticket_amount;
+                });
+            });
+    </script>
+</body>
+</html>
